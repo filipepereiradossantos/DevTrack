@@ -1,0 +1,187 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Acompanhe seu progresso, suas tarefas concluídas e seu desempenho no DevTrack."
+    >
+
+    <title>DevTrack | Meu Progresso</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="layout">
+        <div class="content-layout">
+
+            <aside>
+                <h2>DevTrack</h2>
+
+                <nav aria-label="Navegação principal">
+                    <ul>
+                        <li>
+                            <a href="./index.html">Início</a>
+                        </li>
+
+                        <li>
+                            <a href="./tarefas.html">Minhas Tarefas</a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="./progresso.html"
+                                class="ativo"
+                                aria-current="page"
+                            >
+                                Meu progresso
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main>
+                <header class="page-header">
+                    <div class="header-info">
+                        <h1>Meu progresso</h1>
+                        <p>Acompanhe sua evolução e suas conquistas.</p>
+                    </div>
+                </header>
+
+                <section
+                    class="dashboard"
+                    aria-label="Resumo das tarefas"
+                >
+                    <article class="dashboard-card">
+                        <p>Total de tarefas</p>
+                        <h2 id="totalTasks">0</h2>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <p>Pendentes</p>
+                        <h2 id="pendingTasks">0</h2>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <p>Concluídas</p>
+                        <h2 id="completedTasks">0</h2>
+                    </article>
+                </section>
+
+                <section
+                    class="progress-section"
+                    aria-labelledby="generalProgressTitle"
+                >
+                    <div class="progress-header">
+                        <h2 id="generalProgressTitle">
+                            Progresso geral
+                        </h2>
+
+                        <span id="progressPercentage">0%</span>
+                    </div>
+
+                    <div
+                        class="progress-track"
+                        id="progressBar"
+                        role="progressbar"
+                        aria-label="Progresso das tarefas concluídas"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                    >
+                        <div
+                            class="progress-fill"
+                            id="progressFill"
+                        ></div>
+                    </div>
+
+                    <p id="progressMessage" aria-live="polite">
+                        Comece concluindo sua primeira tarefa!
+                    </p>
+                </section>
+
+                <section
+                    class="performance-section"
+                    aria-labelledby="performanceTitle"
+                >
+                    <h2 id="performanceTitle">
+                        Desempenho das tarefas
+                    </h2>
+
+                    <p class="performance-description">
+                        Veja como estão suas atividades atualmente.
+                    </p>
+
+                    <div class="performance-content">
+                        <div
+                            class="performance-chart"
+                            id="performanceChart"
+                            role="img"
+                            aria-label="Gráfico de tarefas concluídas e pendentes"
+                        >
+                            <div class="chart-center">
+                                <strong id="chartPercentage">0%</strong>
+                                <span>Concluídas</span>
+                            </div>
+                        </div>
+
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span
+                                    class="legend-color legend-completed"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <div>
+                                    <p>Concluídas</p>
+                                    <strong id="chartCompleted">0</strong>
+                                </div>
+                            </div>
+
+                            <div class="legend-item">
+                                <span
+                                    class="legend-color legend-pending"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <div>
+                                    <p>Pendentes</p>
+                                    <strong id="chartPending">0</strong>
+                                </div>
+                            </div>
+
+                            <div class="chart-total">
+                                Total de tarefas:
+                                <strong id="chartTotal">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    class="progress-section"
+                    aria-labelledby="motivationTitle"
+                >
+                    <h2 id="motivationTitle">Continue no ritmo!</h2>
+
+                    <p>
+                        Cada tarefa concluída representa mais um passo
+                        na sua evolução. Mantenha a organização e continue
+                        avançando nos seus objetivos.
+                    </p>
+
+                    <a href="./tarefas.html" class="btn-primary">
+                        Ver minhas tarefas
+                    </a>
+                </section>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Organize suas tarefas, prioridades e datas de vencimento com o DevTrack."
+    >
+
+    <title>DevTrack | Minhas Tarefas</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="layout">
+        <div class="content-layout">
+
+            <aside>
+                <h2>DevTrack</h2>
+
+                <nav aria-label="Navegação principal">
+                    <ul>
+                        <li>
+                            <a href="./index.html">Início</a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="./tarefas.html"
+                                class="ativo"
+                                aria-current="page"
+                            >
+                                Minhas Tarefas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./progresso.html">Meu progresso</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main>
+                <header class="page-header">
+                    <div class="header-info">
+                        <h1>Minhas Tarefas</h1>
+                        <p>Organize suas tarefas de forma eficiente.</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-primary"
+                        id="openTaskForm"
+                    >
+                        + Nova Tarefa
+                    </button>
+                </header>
+
+                <section
+                    class="dashboard"
+                    aria-label="Resumo das tarefas"
+                >
+                    <article class="dashboard-card">
+                        <p>Total de tarefas</p>
+                        <h2 id="totalTasks">0</h2>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <p>Pendentes</p>
+                        <h2 id="pendingTasks">0</h2>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <p>Concluídas</p>
+                        <h2 id="completedTasks">0</h2>
+                    </article>
+                </section>
+
+                <section
+                    class="task-form-container"
+                    id="taskFormContainer"
+                    hidden
+                >
+                    <h2>Nova Tarefa</h2>
+
+                    <form id="taskForm">
+                        <div class="form-group">
+                            <label for="taskName">
+                                Nome da tarefa
+                            </label>
+
+                            <input
+                                type="text"
+                                id="taskName"
+                                placeholder="Ex.: Estudar JavaScript"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="taskPriority">
+                                Prioridade
+                            </label>
+
+                            <select id="taskPriority" required>
+                                <option value="Alta">Alta</option>
+                                <option value="Média" selected>
+                                    Média
+                                </option>
+                                <option value="Baixa">Baixa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="taskDueDate">
+                                Data de vencimento
+                            </label>
+
+                            <input
+                                type="date"
+                                id="taskDueDate"
+                            >
+                        </div>
+
+                        <div class="form-actions">
+                            <button
+                                type="submit"
+                                class="btn-primary"
+                            >
+                                Salvar Tarefa
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn-secondary"
+                                id="cancelTask"
+                            >
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section
+                    class="task-list"
+                    aria-label="Lista de tarefas"
+                    aria-live="polite"
+                >
+                    <!-- As tarefas são adicionadas pelo JavaScript. -->
+                </section>
+            </main>
+
+        </div>
+    </div>
+</body>
+</html>
+```

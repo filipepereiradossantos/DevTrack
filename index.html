@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="DevTrack: organize seus estudos, gerencie tarefas e acompanhe seu progresso."
+    >
+
+    <title>DevTrack | Início</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="layout">
+        <div class="content-layout">
+
+            <aside>
+                <h2>DevTrack</h2>
+
+                <nav aria-label="Navegação principal">
+                    <ul>
+                        <li>
+                            <a href="./index.html" class="ativo" aria-current="page">
+                                Início
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./tarefas.html">
+                                Minhas Tarefas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./progresso.html">
+                                Meu progresso
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main>
+                <header class="page-header">
+                    <div class="header-info">
+                        <h1>Bem-vindo ao DevTrack!</h1>
+                        <p>
+                            Organize seus estudos e acompanhe sua evolução.
+                        </p>
+                    </div>
+                </header>
+
+                <section class="dashboard" aria-label="Resumo das tarefas">
+                    <article class="dashboard-card">
+                        <p>Total de tarefas</p>
+                        <h2 id="totalTasks">0</h2>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <p>Pendentes</p>
+                        <h2 id="pendingTasks">0</h2>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <p>Concluídas</p>
+                        <h2 id="completedTasks">0</h2>
+                    </article>
+                </section>
+
+                <section class="progress-section" aria-labelledby="progressTitle">
+                    <div class="progress-header">
+                        <h2 id="progressTitle">Seu progresso</h2>
+                        <span id="progressPercentage">0%</span>
+                    </div>
+
+                    <div
+                        class="progress-track"
+                        id="progressBar"
+                        role="progressbar"
+                        aria-label="Progresso das tarefas concluídas"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                    >
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+
+                    <p id="progressMessage" aria-live="polite">
+                        Comece concluindo sua primeira tarefa!
+                    </p>
+                </section>
+
+                <section class="progress-section" aria-labelledby="evolutionTitle">
+                    <h2 id="evolutionTitle">Continue evoluindo!</h2>
+
+                    <p>
+                        Registre suas atividades, conclua suas tarefas
+                        e acompanhe seu progresso em um só lugar.
+                    </p>
+
+                    <a href="./tarefas.html" class="btn-primary">
+                        Acessar minhas tarefas
+                    </a>
+                </section>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>
